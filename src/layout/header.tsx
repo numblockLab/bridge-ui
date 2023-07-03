@@ -24,8 +24,13 @@ export default function Header() {
       notifyMessageSuccess("Sending request!");
       airDropUSDT(account)
         .then(() => notifyMessageSuccess("You got 10 USDT!"))
-        .catch(() => {
-          notifyMessageError("Error please try again!");
+        .catch((res) => {
+          if (res.response.data.message) {
+            const dataResMsg = res.response.data.message;
+            notifyMessageError(dataResMsg);
+          } else {
+            notifyMessageError("Error please try again!");
+          }
         });
     } else {
       notifyMessageError("Please connect wallet!");
@@ -48,33 +53,21 @@ export default function Header() {
             </a>
             <div className=" lg:flex gap-1">
               <div className="px-3 flex items-center">
-                <button
-                  className="css-o3dwbz e1v5pgbr0 btn-header underline"
-                  type="button"
-                  onClick={(e) => goFaucet(e)}
-                >
-                  Faucet Numb
+                <button className="css-o3dwbz e1v5pgbr0 btn-header" type="button" onClick={(e) => goFaucet(e)}>
+                  Faucet NUMB
                 </button>
               </div>
             </div>
             <div className=" lg:flex gap-1">
               <div className="px-3 flex items-center">
-                <button
-                  className="css-o3dwbz e1v5pgbr0 btn-header underline"
-                  type="button"
-                  onClick={(e) => goFaucetBnb(e)}
-                >
+                <button className="css-o3dwbz e1v5pgbr0 btn-header" type="button" onClick={(e) => goFaucetBnb(e)}>
                   Faucet BNB
                 </button>
               </div>
             </div>
             <div className=" lg:flex gap-1">
               <div className="px-3 flex items-center">
-                <button
-                  className="css-o3dwbz e1v5pgbr0 btn-header underline"
-                  type="button"
-                  onClick={(e) => goFaucetUSDT(e)}
-                >
+                <button className="css-o3dwbz e1v5pgbr0 btn-header" type="button" onClick={(e) => goFaucetUSDT(e)}>
                   Faucet USDT
                 </button>
               </div>

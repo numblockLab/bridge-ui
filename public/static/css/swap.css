@@ -14,7 +14,7 @@
   -ms-flex-positive: 1;
   flex-grow: 1;
   width: 100%;
-  min-height: 90vh;
+  min-height: 80vh;
   max-width: 1320px;
   margin: 0 auto !important;
   overflow-x: auto;
@@ -1426,7 +1426,9 @@
   gap: 0.5rem;
   border-radius: 0.125rem;
   --tw-bg-opacity: 1;
-  background-color: #f7931e;
+  /* background-color: #f7931e;
+   */
+  background-color: #24b196;
   padding: 0.5rem 1.8rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1692,7 +1694,7 @@
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(41 171 226 / var(--tw-bg-opacity));
+  background-color: #24b196;
   padding: 0.375rem 1rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1708,7 +1710,7 @@
 }
 .css-1xcwaqa.css-1xcwaqa:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(41 166 206 / var(--tw-bg-opacity));
+  background-color: #24b196;
 }
 .css-e779zy {
   margin-bottom: 1.5rem;
@@ -1823,7 +1825,27 @@
   max-width: 600px;
 }
 
-.main-content-cover {
+/* .main-content-cover {
   background-image: url(/static/img/banner/ecos-2.png);
+  background-size: cover;
+} */
+
+.btn-header {
+  font-size: 0.875rem;
+  line-height: 130%;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: #12232f;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/static/img/bg/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }

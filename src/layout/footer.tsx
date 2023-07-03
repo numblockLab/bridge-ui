@@ -4,8 +4,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 export default function Footer() {
   return (
-    <div className="pb-12 md:pb-0 bg-black">
-      <footer className="bg-black flex items-center justify-center dark:border-t dark:border-grey-600">
+    <div className="pb-12 md:pb-0 ">
+      <footer className="flex items-center justify-center dark:border-t dark:border-grey-600">
         {/* <div className="flex flex-col w-full max-w-[1536px] mx-auto px-4 md:px-8 py-10 gap-[40px] md:gap-[80px]">
            <div className="flex gap-[40px] sm:gap-5 flex-col sm:flex-row sm:items-center sm:justify-between">
             <a href="/">
